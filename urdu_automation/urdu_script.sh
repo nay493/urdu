@@ -1,5 +1,6 @@
 #!/bin/bash
 #. files/functions.sh
+#set -x
 ROOT=$(find ~ -name urdu)
 . ${ROOT}/urdu_automation/files/functions.sh
 title "Welcome to the world of finding right words"
@@ -20,3 +21,4 @@ case $1 in
 esac
 done
 title "Thank you, do visit again for more exciting words :)"
+#set +x

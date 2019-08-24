@@ -30,11 +30,19 @@ check_for_spaces "$1"
 
 find_all(){
 words_list=$( locate Urdu_words_lists.txt | head -n 1 )
+if [ -z "$var" ]
+then
+        words_list=$( find ~ -name Urdu_words_lists.txt )
+fi
 cat "${words_list}" | grep "$1" --color
 }
 
 find_eng(){
 words_list=$( locate Urdu_words_lists.txt | head -n 1 )
+if [ -z "$var" ]
+then
+	words_list=$( find ~ -name Urdu_words_lists.txt )
+fi
 #cat "${words_list}" | awk -F ":" '{print $2}' | grep "$1" --color
 ##FIXME
 cat "${words_list}" | awk -F " " '{print $4}' | grep "$1" --color
@@ -42,5 +50,9 @@ cat "${words_list}" | awk -F " " '{print $4}' | grep "$1" --color
 
 find_urdu(){
 words_list=$( locate Urdu_words_lists.txt | head -n 1 )
+if [ -z "$var" ]
+then
+        words_list=$( find ~ -name Urdu_words_lists.txt )
+fi
 cat "${words_list}" | awk -F ":" '{print $1}' | grep "$1" --color
 }
