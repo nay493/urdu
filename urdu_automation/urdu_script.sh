@@ -1,5 +1,7 @@
 #!/bin/bash
-. files/functions.sh
+#. files/functions.sh
+ROOT=$(find ~ -name urdu)
+. ${ROOT}/urdu_automation/files/functions.sh
 title "Welcome to the world of finding right words"
 while true
 do

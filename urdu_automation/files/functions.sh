@@ -9,14 +9,14 @@ echo "INFO: $@"
 }
 
 usage(){
-echo "USAGE: $0 -h -f<a|e|u> -t <adv|n.m|n.f|adj>"
+echo "USAGE: urd -h -f<a|e|u> -t <adv|n.m|n.f|adj>"
 echo "Example:
-	${0} -f u -t ^aa
-	${0} -f u -t aab$
-	${0} -f a -t ^aa
-	${0} -f a -t aa$
-	${0} -f e -t ^aa
-	${0} -f e -t aa$"
+	urd -f u -t ^aa
+	urd -f u -t aab$
+	urd -f a -t ^aa
+	urd -f a -t aa$
+	urd -f e -t ^aa
+	urd -f e -t aa$"
 }
 
 check_for_spaces(){
